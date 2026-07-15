@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO Meta Tags -->
+  <title>Aura & Frame | Luxury Wedding Filmmakers & Editorial Photographers</title>
+  <meta name="description"
+    content="Aura & Frame is a boutique cinematic studio crafting luxury wedding films and editorial photography. Discover our timeless, emotional storytelling and cinematic art.">
+  <meta name="keywords"
+    content="wedding filmmaker, wedding photography, luxury wedding films, cinematic wedding, wedding videography, editorial photography">
+  <meta name="author" content="Aura & Frame Studios">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aura & Frame | Luxury Wedding Filmmakers">
+  <meta property="og:description"
+    content="Boutique cinematic studio crafting luxury wedding films and editorial photography. We tell stories that feel like cinema.">
+
+  <!-- Stylesheets & Favicon -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23050507'/><text y='70' x='20' font-family='Georgia, serif' font-weight='bold' font-size='55' fill='%23c5a880'>A</text></svg>">
+</head>
+
+<body>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Header & Navigation -->
+  <header id="mainHeader">
+    <a href="#" class="logo">
+      <span class="logo-main">Aura &amp; Frame</span>
+      <span class="logo-sub">Cinematic Stories</span>
+    </a>
+
+    <nav>
+      <a href="#philosophy">About</a>
+      <a href="#parallaxStory">Artistry</a>
+      <a href="#portfolio">Feed</a>
+      <a href="#behindLens">Production</a>
+      <a href="#soundscapes">Music</a>
+      <a href="#inquiry">Inquire</a>
+      <button class="btn-upload-trigger" id="btnOpenUpload">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+        </svg>
+        Creator Studio
+      </button>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Interactive Hero Carousel Section -->
+  <section class="hero" id="heroCarousel">
+    <div class="hero-slides-container" id="slidesContainer">
+
+      <!-- Slide 01: Ocean Video -->
+      <div class="hero-slide active" data-slide="0">
+        <div class="hero-media-overlay"></div>
+        <video class="hero-video-bg" autoplay loop muted playsinline preload="auto"
+          poster="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80">
+          <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+          <p class="hero-subtitle">Boutique Film &amp; Photography</p>
+          <h1 class="hero-title">
+            Writing Poetry
+            <span>With Light &amp; Shadow</span>
+          </h1>
+          <div class="hero-cta">
+            <a href="#portfolio" class="btn-primary">View Gallery</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 02: Tuscan Garden (Photo) -->
+      <div class="hero-slide" data-slide="1">
+        <div class="hero-media-overlay"></div>
+        <img class="hero-image-bg"
+          src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80"
+          alt="Cinematic couple walking">
+        <div class="hero-content">
+          <p class="hero-subtitle">Editorial Romantic Narratives</p>
+          <h1 class="hero-title">
+            Timeless Love
+            <span>Captured Forever</span>
+          </h1>
+          <div class="hero-cta">
+            <a href="#portfolio" class="btn-primary">Explore Stories</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 03: Desert Run (Video) -->
+      <div class="hero-slide" data-slide="2">
+        <div class="hero-media-overlay"></div>
+        <video class="hero-video-bg" autoplay loop muted playsinline preload="auto"
+          poster="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80">
+          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+            type="video/mp4">
+        </video>
+        <div class="hero-content">
+          <p class="hero-subtitle">Adventure &amp; Heritage</p>
+          <h1 class="hero-title">
+            Bespoke Cinema
+            <span>Feel The Romance</span>
+          </h1>
+          <div class="hero-cta">
+            <a href="#inquiry" class="btn-primary">Reserve Date</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Carousel Nav Buttons -->
+    <button class="carousel-nav-btn prev" id="btnPrevSlide" aria-label="Previous Slide">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor" />
+      </svg>
+    </button>
+    <button class="carousel-nav-btn next" id="btnNextSlide" aria-label="Next Slide">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor" />
+      </svg>
+    </button>
+
+    <!-- Carousel Pagers -->
+    <div class="carousel-dots" id="carouselDots">
+      <span class="dot active" data-slide="0"></span>
+      <span class="dot" data-slide="1"></span>
+      <span class="dot" data-slide="2"></span>
+    </div>
+
+    <div class="scroll-indicator">
+      <span class="scroll-text">Explore</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Philosophy Section -->
+  <section class="philosophy" id="philosophy">
+    <div class="phil-container reveal-in">
+      <span class="section-tag">Our Philosophy</span>
+      <h2 class="phil-quote">“The most beautiful films are the ones that make you feel.”</h2>
+      <p class="phil-desc">
+        Aura &amp; Frame is a boutique creative studio crafting luxury wedding films and editorial photography for
+        couples worldwide. Inspired by the romance of vintage cinema, raw emotion, and high fashion, we capture candid
+        milestones and refine them into timeless works of art. We believe every couple has a signature soundtrack, a
+        distinct light, and a story waiting to be told.
+      </p>
+    </div>
+  </section>
+
+  <!-- Parallax Overlapping Artistry Section -->
+  <section class="storytelling-parallax" id="parallaxStory">
+    <div class="parallax-wrapper">
+      <div class="parallax-text-col reveal-in">
+        <span class="section-tag">Cinematic Art</span>
+        <h2 class="parallax-heading">Crafting The Layers of Memory</h2>
+        <p class="parallax-body">
+          Filmmaking is more than recording frames—it's a symphony of pacing, lighting, and composition. We compose
+          unique soundscapes for every film and grade our colors by hand, echoing classic celluloid aesthetics. Every
+          look, every sigh, and every burst of laughter is preserved in high-fidelity emotion.
+        </p>
+        <div class="story-stats">
+          <div class="stat-item">
+            <span class="stat-number">10+</span>
+            <span class="stat-label">Years of Stories</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">250+</span>
+            <span class="stat-label">Global Commissions</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="parallax-visuals-col">
+        <div class="visuals-container">
+          <!-- Main background visual (back layer) -->
+          <div class="parallax-img-layer back-layer reveal-in">
+            <img src="https://images.unsplash.com/photo-1519225495810-7512c696505a?auto=format&fit=crop&w=800&q=80"
+              alt="Cinematic table setup decoration">
+          </div>
+          <!-- Front overlapping visual (front layer) -->
+          <div class="parallax-img-layer front-layer reveal-in" style="transition-delay: 0.25s;">
+            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=80"
+              alt="Couple laughing candidly">
+          </div>
+          <!-- Gold border frame layout -->
+          <div class="parallax-decor-layer reveal-in" style="transition-delay: 0.1s;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio / Feed Section -->
+  <section class="gallery-section" id="portfolio">
+    <div class="gallery-header reveal-in">
+      <h2 class="gallery-title">The Cinema Feed</h2>
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All Work</button>
+        <button class="filter-btn" data-filter="video">Films</button>
+        <button class="filter-btn" data-filter="photo">Photography</button>
+      </div>
+    </div>
+
+    <!-- Gallery Grid (Cover-optimized) -->
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Media Cards will be injected dynamically here -->
+    </div>
+  </section>
+
+  <!-- Behind the Lens: Horizon Horizontal Scroll Section -->
+  <section class="horizon-scroll-section" id="behindLens">
+    <div class="horizon-header reveal-in">
+      <span class="section-tag">Behind the Scenes</span>
+      <h2 class="horizon-title">Production Horizon</h2>
+      <p class="horizon-desc">An adventurous glimpse into our prep, premium gear, and narrative storyboarding process in
+        the field.</p>
+    </div>
+
+    <div class="horizon-scroll-container">
+      <div class="horizon-track">
+
+        <div class="horizon-card">
+          <div class="horizon-img-box">
+            <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=600&q=80"
+              alt="Focusing lens closeup">
+          </div>
+          <div class="horizon-card-info">
+            <span class="horizon-number">01</span>
+            <h3 class="horizon-card-title">Optics &amp; Textures</h3>
+            <p class="horizon-card-desc">We select vintage cinema lenses to capture natural, creamy bokeh and organic
+              skin tones.</p>
+          </div>
+        </div>
+
+        <div class="horizon-card">
+          <div class="horizon-img-box">
+            <img src="https://images.unsplash.com/photo-1478720143022-90994772042a?auto=format&fit=crop&w=600&q=80"
+              alt="Directing wedding couple">
+          </div>
+          <div class="horizon-card-info">
+            <span class="horizon-number">02</span>
+            <h3 class="horizon-card-title">Candid Direction</h3>
+            <p class="horizon-card-desc">We blend in with your guests, avoiding heavy rigs or intrusive spotlights to
+              capture raw feelings.</p>
+          </div>
+        </div>
+
+        <div class="horizon-card">
+          <div class="horizon-img-box">
+            <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80"
+              alt="Storyboard mapping">
+          </div>
+          <div class="horizon-card-info">
+            <span class="horizon-number">03</span>
+            <h3 class="horizon-card-title">Storyboard Prep</h3>
+            <p class="horizon-card-desc">Every event is pre-visualized to ensure that we capture the unique
+              micro-moments.</p>
+          </div>
+        </div>
+
+        <div class="horizon-card">
+          <div class="horizon-img-box">
+            <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=600&q=80"
+              alt="Color grading suite">
+          </div>
+          <div class="horizon-card-info">
+            <span class="horizon-number">04</span>
+            <h3 class="horizon-card-title">The Color Suite</h3>
+            <p class="horizon-card-desc">Hand-graded hues crafted to amplify the romantic warmth and timeless feel of
+              every scene.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Soundscapes (Audio Player Section) -->
+  <section class="soundscapes" id="soundscapes">
+    <div class="audio-showcase reveal-in">
+      <!-- Background Visualizer Waveform -->
+      <div class="audio-waveform" id="audioWaveform">
+        <!-- 40 Wave Bars for a gorgeous music wave look -->
+        <span class="audio-wave-bar"></span><span class="audio-wave-bar"></span><span
+          class="audio-wave-bar"></span><span class="audio-wave-bar"></span><span class="audio-wave-bar"></span><span
+          class="audio-wave-bar"></span><span class="audio-wave-bar"></span><span class="audio-wave-bar"></span><span
+          class="audio-wave-bar"></span><span class="audio-wave-bar"></span>
+        <span class="audio-wave-bar"></span><span class="audio-wave-bar"></span><span
+          class="audio-wave-bar"></span><span class="audio-wave-bar"></span><span class="audio-wave-bar"></span><span
+          class="audio-wave-bar"></span><span class="audio-wave-bar"></span><span class="audio-wave-bar"></span><span
+          class="audio-wave-bar"></span><span class="audio-wave-bar"></span>
+        <span class="audio-wave-bar"></span><span class="audio-wave-bar"></span><span
+          class="audio-wave-bar"></span><span class="audio-wave-bar"></span><span class="audio-wave-bar"></span><span
+          class="audio-wave-bar"></span><span class="audio-wave-bar"></span><span class="audio-wave-bar"></span><span
+          class="audio-wave-bar"></span><span class="audio-wave-bar"></span>
+        <span class="audio-wave-bar"></span><span class="audio-wave-bar"></span><span
+          class="audio-wave-bar"></span><span class="audio-wave-bar"></span><span class="audio-wave-bar"></span><span
+          class="audio-wave-bar"></span><span class="audio-wave-bar"></span><span class="audio-wave-bar"></span><span
+          class="audio-wave-bar"></span><span class="audio-wave-bar"></span>
+      </div>
+
+      <div class="audio-art">
+        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=300&q=80"
+          alt="Cinematic tape deck art">
+      </div>
+
+      <div class="audio-details">
+        <span class="audio-subtitle">Original Score</span>
+        <h3 class="audio-title">Ethereal Solitude</h3>
+        <p class="audio-desc">A delicate piano and ambient pad composition, written in-house to accompany silent moments
+          and slow portrait walks.</p>
+
+        <div class="custom-player-bar">
+          <button class="btn-play-audio" id="btnPlayAudio" aria-label="Play Soundtrack">
+            <svg viewBox="0 0 24 24" width="20" height="20" id="audioPlayIcon">
+              <path d="M8 5v14l11-7z" fill="currentColor" />
+            </svg>
+          </button>
+
+          <div class="audio-progress-container">
+            <div class="audio-progress-bg" id="audioProgressBar">
+              <div class="audio-progress-fill" id="audioProgressFill"></div>
+            </div>
+            <div class="audio-time-row">
+              <span id="audioCurrentTime">00:00</span>
+              <span id="audioDuration">00:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Hidden Native Audio Element -->
+      <audio id="bgAudio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3"
+        preload="metadata"></audio>
+    </div>
+  </section>
+
+  <!-- Inquiry Section -->
+  <section class="inquiry" id="inquiry">
+    <div class="inquiry-container reveal-in">
+      <span class="section-tag">Let's Connect</span>
+      <h2 class="inquiry-title">Commission Your Film</h2>
+      <p class="inquiry-subtitle">We accept a limited number of commissions annually to ensure dedicated focus. Tell us
+        about your journey.</p>
+
+      <form class="inquiry-form" id="inquiryForm"
+        onsubmit="event.preventDefault(); alert('Thank you for reaching out! We will contact you within 24 hours.');">
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" id="inqName" class="form-input" placeholder=" " required>
+            <label for="inqName" class="form-label">Full Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="inqEmail" class="form-input" placeholder=" " required>
+            <label for="inqEmail" class="form-label">Email Address</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" id="inqDate" class="form-input" placeholder=" " onfocus="(this.type='date')"
+              onblur="if(!this.value) this.type='text'">
+            <label for="inqDate" class="form-label">Event Date</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="inqLocation" class="form-input" placeholder=" ">
+            <label for="inqLocation" class="form-label">Location / Venue</label>
+          </div>
+        </div>
+
+        <div class="form-group full-width">
+          <textarea id="inqMessage" class="form-input" rows="4" placeholder=" " required
+            style="resize: none;"></textarea>
+          <label for="inqMessage" class="form-label">Tell us your story...</label>
+        </div>
+
+        <button type="submit" class="btn-primary btn-submit">Send Inquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="logo-main">Aura &amp; Frame</span>
+        <span class="logo-sub">Cinematic Stories</span>
+      </div>
+      <div class="footer-links">
+        <a href="#philosophy">About</a>
+        <a href="#parallaxStory">Artistry</a>
+        <a href="#portfolio">Feed</a>
+        <a href="#behindLens">Production</a>
+        <a href="#soundscapes">Music</a>
+        <a href="#inquiry">Inquire</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Aura &amp; Frame Studios. All Rights Reserved.</span>
+      <span>Crafted for visual-first storytelling.</span>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal for Photography -->
+  <div class="modal-overlay" id="lightboxModal">
+    <button class="modal-close" id="btnCloseLightbox" aria-label="Close Lightbox">
+      <svg viewBox="0 0 24 24">
+        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+          fill="currentColor" />
+      </svg>
+    </button>
+    <div class="lightbox-content">
+      <img src="" alt="Zoomed image" class="lightbox-img" id="lightboxImg">
+      <div class="lightbox-caption">
+        <h4 class="lightbox-title" id="lightboxTitle">Visual Artifact</h4>
+        <p class="lightbox-desc" id="lightboxDesc">Description goes here</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Video Player Modal for Films -->
+  <div class="modal-overlay" id="videoModal">
+    <button class="modal-close" id="btnCloseVideo" aria-label="Close Video Player">
+      <svg viewBox="0 0 24 24">
+        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+          fill="currentColor" />
+      </svg>
+    </button>
+
+    <div class="video-player-container">
+      <div class="video-screen-wrapper">
+        <video class="video-screen" id="playerVideo" playsinline></video>
+        <div class="video-loading-spinner" id="videoLoadingSpinner">
+          <div class="spinner-circle"></div>
+          <span
+            style="font-family: var(--font-sans); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-secondary); margin-top: 8px;">Loading
+            Film...</span>
+        </div>
+      </div>
+
+      <!-- Custom Video Controls -->
+      <div class="video-controls">
+        <button class="video-control-btn" id="btnVideoPlay" aria-label="Play Video">
+          <svg viewBox="0 0 24 24" id="videoPlayIcon">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </button>
+
+        <div class="video-timeline-container" id="videoTimelineContainer">
+          <div class="video-timeline-bg">
+            <div class="video-timeline-fill" id="videoTimelineFill"></div>
+          </div>
+        </div>
+
+        <span class="video-time" id="videoTimeText">00:00 / 00:00</span>
+
+        <div class="video-volume-container">
+          <button class="video-control-btn" id="btnVideoMute" aria-label="Mute Video">
+            <svg viewBox="0 0 24 24" id="videoVolumeIcon">
+              <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
+            </svg>
+          </button>
+          <div class="video-volume-slider" id="videoVolumeSlider">
+            <div class="video-volume-fill" id="videoVolumeFill"></div>
+          </div>
+        </div>
+
+        <button class="video-control-btn" id="btnVideoFullscreen" aria-label="Toggle Fullscreen">
+          <svg viewBox="0 0 24 24">
+            <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Creator's Studio Upload Drawer (Slide-out from Right) -->
+  <div class="upload-drawer" id="uploadDrawer">
+    <!-- Close Button inside Drawer -->
+    <button class="modal-close" id="btnCloseUpload" aria-label="Close Upload Drawer"
+      style="top: 1.5rem; right: 1.5rem;">
+      <svg viewBox="0 0 24 24">
+        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+          fill="currentColor" />
+      </svg>
+    </button>
+
+    <div class="drawer-header">
+      <h3 class="drawer-title">Creator Studio</h3>
+      <p class="drawer-subtitle">Publish a new film or photograph directly to the live home feed.</p>
+    </div>
+
+    <form class="upload-form" id="uploadForm">
+      <!-- Drag & Drop Zone -->
+      <div class="file-dropzone" id="fileDropzone">
+        <input type="file" id="mediaFileInput" accept="image/*,video/*" style="display: none;">
+        <div class="dropzone-icon">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+              fill="currentColor" />
+          </svg>
+        </div>
+        <div class="dropzone-text" id="dropzoneText">
+          <span>Click to upload</span> or drag and drop
+        </div>
+        <p class="dropzone-hint">Support photos (.jpg, .png) and videos (.mp4). Max 50MB.</p>
+      </div>
+
+      <!-- File Preview (Hidden by Default) -->
+      <div class="preview-container" id="previewContainer">
+        <div class="preview-media-box" id="previewMediaBox">
+          <!-- img or video will be injected here -->
+        </div>
+        <div class="preview-details">
+          <div class="preview-name" id="previewName">filename.jpg</div>
+          <div class="preview-size" id="previewSize">2.4 MB</div>
+          <!-- Upload Progress indicator -->
+          <div class="progress-bar-container" id="uploadProgressBarContainer">
+            <div class="progress-bar-fill" id="uploadProgressBarFill"></div>
+          </div>
+        </div>
+        <button type="button" class="btn-remove-file" id="btnRemoveFile" aria-label="Remove File">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              fill="currentColor" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Title Input -->
+      <div class="form-group">
+        <input type="text" id="uploadTitle" class="form-input" placeholder=" " required>
+        <label for="uploadTitle" class="form-label">Project Title</label>
+      </div>
+
+      <!-- Category Selector -->
+      <div class="form-select-group">
+        <label for="uploadCategory" class="form-select-label">Category</label>
+        <select id="uploadCategory" class="form-select">
+          <option value="Wedding Film">Wedding Film</option>
+          <option value="Love Story">Love Story</option>
+          <option value="Portrait Photography">Portrait Photography</option>
+          <option value="Editorial Photo">Editorial Photo</option>
+          <option value="Celebration">Celebration</option>
+        </select>
+      </div>
+
+      <!-- Description Input -->
+      <div class="form-group">
+        <textarea id="uploadDescription" class="form-input" rows="3" placeholder=" " required
+          style="resize: none;"></textarea>
+        <label for="uploadDescription" class="form-label">Story Description</label>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn-primary btn-upload-submit" id="btnPublish">Publish to Feed</button>
+    </form>
+  </div>
+
+  <!-- Main JavaScript App -->
+  <script src="db.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
