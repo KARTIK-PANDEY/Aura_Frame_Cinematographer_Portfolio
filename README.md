@@ -1,4 +1,4 @@
-# Aura & Frame - Luxury Wedding & Editorial Cinematography Website
+# Aura & Frame - Luxury & Editorial Cinematography PortFolio
 
 A premium, visual-first portfolio website designed for high-end videographers and photographers. Inspired by elite agencies like *The Wedding Filmer*, the project highlights emotional storytelling, typography, custom media controls, and smooth scroll animations.
 
@@ -38,5 +38,11 @@ To run the developer server locally:
    npm run dev
    ```
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## Developed By:- **KARTIK PANDEY** 
+
+---
 
 *Note: Since the site uses IndexedDB to store files locally, please access the site through `localhost:3000` (or another served port) rather than double-clicking the file, to ensure database permissions work correctly.*
